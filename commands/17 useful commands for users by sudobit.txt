@@ -1,0 +1,142 @@
+Top 17 commands for Ubuntu Beginners
+
+Basics GNU/Linux Commands
+
+#1. ls : list directory contents
+
+ls
+If you want to see hidden files/directories (beginning with dot.), the use -a flag.
+
+ls -a
+Check the manual for more detail (man ls).
+
+ 
+
+#2. cd : Change Directory
+
+cd ../
+cd /home/Desktop
+Remember,
+
+. represents the current directory
+
+.. represents the parent directory
+
+~ represents the home directory (of the user)
+
+ 
+
+#3. pwd : print the current/working directory
+
+pwd
+/home/Desktop/scripts
+ 
+
+#4. mkdir : make/create directory.
+
+mkdir funny_stuffs
+ 
+
+#5. rm : remove/delete file/directory
+
+rm useless.sh
+NOTE : it removes directories only if it’s empty, unless you specify -f flag for force deletion. But you must be careful with the arguments such as -r, -f. (-rf is very dangerous).
+
+ 
+
+#6. sudo : superuser do, to gain root privilege
+
+e.g
+
+sudo apt-get install gnome-shell
+Then enter your user account password, and you would be able to do administrative tasks like root. So if you’re getting any permission error using a command, then adding sudo as a prefix, might help.
+
+ 
+
+#7. mv : rename or move a file/directory
+
+mv file1 ~/Downloads/Archive/
+the above command will move the file from the current directory to target directory.
+
+mv logo_2.jpg new_logo.jpg
+it will rename the file to new_logo.jpg.
+
+ 
+
+#8. cat : View File contents
+
+cat install.log
+ 
+
+#9. man : A Reference manual for utils/commands/programs
+
+e.g if you want to know more about rm command, then type –
+
+man rm
+ 
+
+#10. cp : Copy Files/Directories
+
+cp movie_name.mp4 ~/Downloads/movies/
+The above command will copy the movie_name.mp4 to the specified directory.
+
+ 
+
+#11. wget : Download files from server
+
+GNU Wget or wget is very handy in downloading stuffs from internet, over the command line.
+
+wget url_of_the_content
+ 
+
+#12. gksudo : Run GUI Application with Root privilege
+
+gksudo nautilus
+The above command will open nautilus with root privilege. It’s just like sudo, but in GUI mode.
+
+ 
+
+#13. shutdown : To shutdown the computer from terminal
+
+shutdown -h 
+where time can be 0 if you want to shutdown now or specify the exact time such as 10:30.
+
+ 
+
+#14. restart : Restart the computer
+
+restart
+Package Management
+
+These are Ubuntu Specific commands. It Requires root privilege, so just add the sudo prefix before each command (it will ask for the user password and you’re done!).
+
+#15. apt-get : Command Line Tool for handling packages
+There are various options such as
+
+install – To install package.
+e.g Install the program PyRoom (A distraction Free Text Editor)
+
+sudo apt-get install pyroom
+remove – To remove package
+
+sudo apt-get remove kate
+update – To update the package cache
+
+sudo apt-get update
+ 
+
+#16. add-apt-repository – To add a PPA (for your favorite Application)
+
+e.g add the PPA for the App Eidete (Screencasting program)
+
+sudo add-apt-repository ppa:shnatsel/eidete-daily
+After, adding the PPA, apt-get update command is required.
+
+ 
+
+#17. apt-cache : To access the Package details from cache
+
+search : search for the related packages in the apt-cache
+e.g
+
+apt-cache search image editor

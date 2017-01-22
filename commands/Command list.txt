@@ -1,0 +1,7 @@
+for complete terminal command list:
+
+<Method 1>
+$ ls /bin /sbin /usr/bin /usr/sbin
+
+<Method 2>
+paths=$(echo $PATH | tr ':' '\n') && for path in $paths; do ls $path; done
