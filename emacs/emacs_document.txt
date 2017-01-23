@@ -1,0 +1,154 @@
+* vim vs emacs
+
+vim is almost always pre-installed. It's usually more useful for small sessions. You open up a file, do a quick edit and quit.
+vim is modal, meaning it supports multiple modes like insert mode, command line mode or the graphical mode which gives access to various key sequences making it slightly faster although it's learning curve is a lot steeper.
+
+emacs is not just a text editor. It's also an IDE, a file manager, a terminal emulator, a web browser, a mail client, a news client.
+emacs fanboys boot up their OS, open emacs and then forget about the OS itself because everything that they need to do, they can do using emacs.
+emacs is like a mini-OS using which one can check their mails, news, rss feeds, browse the web or run shell scripts.
+Multitasking is comparatively a lot easier with emacs since it is better at interacting with multiple subprocesses like some time consuming compiling task, running multiple shell scripts and editing some text file alongside.
+
+
+* Basic key bindings
+
+In the text that follows:
+
+C-Ctrl
+M(meta)-Alt
+
+** File:
+
+C-x C-f: Open a file
+C-x C-s: Save file
+C-g: Cancels the current command
+
+** Cursor movement:
+
+C-f: Forward one character
+C-b: Back one character
+C-n: Next line
+C-p: Previous line
+
+C-a: Beginning of line
+C-e: End of line
+M-f: Forward one word
+M-b: Back one word
+M-a: Previous sentence
+M-e: Next sentence
+M-<: Beginning of buffer
+M->: End of buffer
+
+- Use C-u along with any of the above commands to use them repeatedly.
+
+C-u [number]
+Eg.
+C-u 3 C-p: Back 3 lines
+
+M-x linum-mode: Displays line numbers
+M-g g: Jump to specified line
+
+** Buffer:
+
+Whenever a file is opened, a new buffer is allocated to it. Usually, it has the same name as the file it contains.
+
+C-x C-b: List all currently active buffers
+C-x b: Switch to a buffer using its name
+C-x o: Switch pane
+C-x 1: Remove other panes and focus on current
+C-x k: Kill buffer
+C-x C-c: Exit emacs
+
+** Killing and yanking:
+
+When some text is killed in emacs, it gets stored in the kill ring and one can cycle through the kill ring to yank(paste) text that was killed earlier unlike the clipboard that stores only the most recent cut/copy.
+
+C-k: Kill line
+C-SPC: Set mark for highlighting text
+C-w: Kill region(highlighted text)
+M-w: Copy region
+
+M-d: Kill next word
+M-k: Kill to end of sentence
+
+C-y: Yanks last killed text
+M-y: Cycle through kill ring and replace yanked text with previously killed text
+
+C-x u: Undo
+
+** Search and replace:
+
+C-s: Incremental search
+C-r: Backward incremental search
+
+M-%: Find and replace
+- Type y to replace the current match.
+- Type n to skip to the next match without replacing.
+- Type q to exit without doing any more replacements.
+- Type . to replace this match, then exit.
+- Type ! to replace all remaining matches with no more questions.
+
+C-M-s: Regular expression incremental search
+
+** Help commands:
+
+C-h k: Documentation for the command associated with a particular key
+C-h a: Search for commands by keywords or regexp
+
+** To invoke a command by its name:
+
+M-x [command name]
+
+M-x shell
+M-x compile
+M-x gdb
+M-!: Run a shell command
+M-x ediff: Compare 2 files and highlight their differences
+M-x dired: Directory editor
+
+*** Dired commands:
+
+C new RET: Copy files
+D: Delete files
+R new RET: Rename files
+Z: Compress files
+
+* Games:
+
+M-x tetris
+M-x snake
+M-x doctor
+
+* Mail and news:
+
+M-x gnus: Mail client and newsreader for emacs
+
+To configure gnus to read mails and check news feeds:
+
+- Add the following lines to the .emacs file:
+
+(setq gnus-select-method '(nnml "")) ;; this depends on how you want
+                                     ;; to get your mail
+(setq gnus-secondary-select-methods '((nntp "news.gwene.org")
+                                      (nntp "news.eternal-september.org")))
+
+- Add the following lines to the .gnus file:
+
+(setq gnus-select-method
+      '(nnimap "gmail"
+	       (nnimap-address "imap.gmail.com")  ; it could also be imap.googlemail.com if that's your server.
+	       (nnimap-server-port "imaps")
+	       (nnimap-stream ssl)))
+
+(setq smtpmail-smtp-service 587
+      gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]")
+
+- To show a list of news servers press '^'. Subscribe/unsubscribe a newsgroup using 'u'.
+- To get back from any buffer in gnus or to quit use 'q'.
+
+- To send a quick mail:
+C-x m
+- To attach a file:
+C-c C-a
+- To send:
+C-c C-c
+
