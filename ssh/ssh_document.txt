@@ -1,0 +1,46 @@
+SSH:
+1) SSH stands for secure shell 
+2) It is used to access other systems remotely. It operates via port 22.
+3) Alternate tool for ssh is telnet
+4) Important difference between telnet and ssh is that ssh is more secure than telnet. Traffic is encrypted when you use ssh.
+5) Format:
+	1) ssh username@ip 
+		ip = ip address of remote computer
+		username = username of remote computer
+	2) ssh -l username ip
+6) Once you login to remote computer, you start the remote computer's terminal session. To check, you can use "who" command.
+7) Now you can use all the normal commands which are supported by the operating system of the remote computer.
+8) But if you try to open some GUI window, it won't open. This is because we need to set the DISPLAY environment variable.
+9) To set DISPLAY variable, type "export DISPLAY=:0". This means we are setting the current display for GUI stuff.
+10) Now we can open GUI windows.
+11) We cannot use ssh to transfer files. For that we use "sftp" utility.
+SFTP:
+1) SFTP stands for secure file transfer protocol. It also operates on port 22.
+2) This is used to transfer files from local machine to remote machine and vice versa.
+3) Format:
+	sftp username@ip
+4) Here, not all commands work. Commands that work using sftp are: 
+	1) chown
+	2) chmod
+	3) mkdir
+	4) rm 
+	5) cd
+	6) ls
+	7) pwd
+5) When you want to execute a command on local machine, use "!" or "l (small letter L)" before the command. Eg: lpwd(To get working directory of local 		machine) . Be careful, Not all commands work using "!" and "l". You need to figure it out which work with which symbol.
+6) To download, i.e to get any file from remote machine to local machine, use "get" command.
+	e.g: get foo
+	To download multiple files use "mget" instead of "get" command.
+	e.g: mget foo1 foo2 foo3
+	e.g: mget -r Directory
+	NOTE: File will download in your current working directory of local machine.
+7) To upload, i.e to put any file from local machine into remote machine, use "put" command.
+	e.g: put foo
+	To upload multiple files use "mput" instead of "put".
+	e.g: mput *.txt   (Upload all '.txt' files)
+	Uploading a directory is quite tricky
+	NOTE: File will be uploaded in your working directory of remote machine
+	FAQ: How can I block some ip permanently.
+	Ans: Use firewall to do this. A common firewall tool used is iptables.
+		To block some ip, use the command "sudo iptables -A INPUT -s ip_address_to_be_blocked -j REJECT"
+		

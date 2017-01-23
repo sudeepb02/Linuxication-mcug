@@ -1,0 +1,49 @@
+HELP PAGE for tv command:
+
+NAME:
+	tv - a command to watch TV shows on your disk
+
+SYNOPSIS:
+	tv
+
+DESCRIPTION:
+	tv command provides a command line interface to browse through and watch the TV shows that are stored on the disk.
+
+OPTIONS:
+	"tv" displays all episodes.
+	"tv -u" displays only episodes that are unwatched.
+	"tv -n" or "tv --name" followed by the keyword can be used to display tv shows having having that 	keyword
+	"tv -u -n 'show_name'" displays shows matching 'show_name' keyword
+	"tv --latest 'n'" will display episodes which are due 'n' days
+	"tv --log" display logs 
+	"tv --nconfig" to configure network settings
+
+
+1. While selecting a TV show:
+
+h - display help
+s - set a particular tv show as watched
+u - display unwatched tv shows i.e. similar to "tv -u"
+a - display all shows if you are in "show unwatched" mode
+q - quit
+search - used to search a tv show by the keyword
+latest - display latest episodes that are due specified number of days
+
+2. While selecting a Season of a particular TV show
+
+b - go back to select a TV show name
+s - set a particular season as watched
+r - select a random season
+q - quit
+
+3. While selecting an Episode
+
+b - go back to Seasons sections
+s - set a particular episode as watched
+r - select a random episode to watch
+u - set a particular episode as unwatched
+r (after pressing u) - set a range of episodes as unwatched
+q - quit
+
+4. After selecting "s(set as watched)" from any position (i.e TV show name or Season or Episodes):
+r - to set a range as watched
