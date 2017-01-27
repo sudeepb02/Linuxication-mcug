@@ -1,0 +1,3 @@
+Overall git: https://learnxinyminutes.com/docs/git/
+Resources: http://eagain.net/articles/git-for-computer-scientists/
+Git Basics: https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
