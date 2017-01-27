@@ -1,0 +1,30 @@
+Makefile is a program building tool which runs on Unix, Linux, and their flavors. It aids in simplifying building program executables that may need various modules. To determine how the modules need to be compiled or recompiled together, make takes the help of user-defined makefiles.
+Makefile guides the make utility while compiling and linking program modules.
+
+The general syntax of a Makefile target rule is −
+[target] : [dependencies]
+	[ command ]
+	
+To make the project run this command - make
+To clean the compiled files run this command - make clean
+	
+While compiling a file, the make checks its object file and compares the time stamps. If source file has a newer time stamp than the object file, then it generates new object file assuming that the source file has been changed.
+
+
+Some Important Flags-
+-f file -- use file as Makefile
+-i	-- ignore errors
+-s 	-- silent operations
+-d 	-- debugging info
+
+We can use some commands in form of variables also, to avoid typing repeatative long commands example- 
+
+g++ -c main.cpp
+
+can be replace by-
+
+cc=g++
+cflag = -c
+$(cc) $(cflag) main.cpp
+
+

@@ -1,0 +1,42 @@
+On Unix platform, tar command is the primary archiving utility. 
+
+Imp flags-
+-c - create a new archive
+-v - verbosely list files being processed
+-f tar_name - specify tar_name as name of tarball
+-x - extract archive
+-z - use gzip compression/decompression algorithm
+-j - use bzip2 compression/decompression algorithm
+
+Creating an uncompressed tar archive.
+This is the basic command to create a tar archive.
+
+	tar cvf archive_name.tar dirname/
+	
+To use a gzip compression on the tar archive, use the z option as shown below.
+
+	tar cvzf archive_name.tar.gz dirname/
+
+Create a bzip2 tar archive as shown below:
+
+	tar cvfj archive_name.tar.bz2 dirname/
+	
+	
+gzip vs bzip2: 
+1. bzip2 takes more time to compress and decompress than gzip. 
+2. bzip2 archival size is less than gzip.
+
+Extract a tar file using option x as shown below:
+	
+	tar xvf archive_name.tar
+	
+Use the option z for uncompressing a gzip tar archive.
+	
+	 tar xzvf archive_name.tar.gz
+	
+Use the option j for uncompressing a bzip2 tar archive.
+
+	 tar xjvf archive_name.tar.bz2
+	 
+
+	 
