@@ -1,0 +1,15 @@
+all: calc
+
+# $^ means all the dependency files
+# $@ is the target file
+# $< is the first dependency file
+
+calc:	add.o sub.o mul.o div.o main.o
+	g++ $^ -o $@
+
+%.o: %.cpp
+	g++ -c $<
+
+clean: calc
+	rm calc *.o
+
