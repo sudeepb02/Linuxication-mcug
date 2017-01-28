@@ -1,7 +1,5 @@
 all: calc
 
-# $^ means all the target files
-
 calc:	add.o sub.o mul.o div.o main.o
 	g++ add.o sub.o mul.o div.o main.o -o calc
 
@@ -22,4 +20,3 @@ main.o:	main.cpp
 
 clean: calc
 	rm calc *.o
-
