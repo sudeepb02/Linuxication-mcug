@@ -14,4 +14,3 @@ calc:	${OBJ}
 
 clean: calc
 	rm $< ${OBJ}
-
