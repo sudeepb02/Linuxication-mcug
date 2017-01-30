@@ -18,5 +18,5 @@ div.o:	div.cpp
 main.o:	main.cpp
 	g++ -c main.cpp
 
-clean: calc
+clean: 
 	rm calc *.o
