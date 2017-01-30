@@ -1,5 +1,19 @@
 On Unix platform, tar command is the primary archiving utility. 
 
+The name "tar" originally came from the phrase "Tape ARchive". 
+
+Use of tar:
+* Backup
+     Because the archive created by 'tar' is capable of preserving file
+     information and directory structure, 'tar' is commonly used for
+     performing full and incremental backups of disks.  A backup puts a
+     collection of files (possibly pertaining to many users and
+     projects) together on a disk or a tape.  This guards against
+     accidental destruction of the information in those files.  GNU
+     'tar' has special features that allow it to be used to make
+     incremental and full dumps of all the files in a file system.
+
+
 Imp flags-
 -c - create a new archive
 -v - verbosely list files being processed

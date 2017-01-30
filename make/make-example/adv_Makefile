@@ -12,5 +12,5 @@ calc:	${OBJ}
 %.o: %.cpp
 	g++ -c $<
 
-clean: calc
+clean: 
 	rm $< ${OBJ}
