@@ -1,0 +1,45 @@
+						Automounting
+Automounting is a procedure to automatically mount a filesystem on linux system when the system boots up.
+Linux file system maintains a special file /etc/fstab which contain info about filesystem and where to mount which partition during bootup.
+/etc/fstab is also important because it is refered by commands fsck,mount, umount commond during their operation.
+
+The structure of /etc/fstab is as follows-
+<file_system>   <mount_point>   <type>  <options>     <dump>  <pass>  
+
+file_system ->  contains uid or device file which gives info about filesystem.
+		we can either use uid or device file but it is preferred to use uid because device file name may change.
+		to view UID of filesystem- use command blkid
+		to view name of device file name - use command lsblk
+
+mount_point -> where to mount your partition
+		eg /media/aditya/label
+
+type -> type of filesystem
+	eg. ntfs,ext4,vfat,tmpfs,udf
+
+options -> options
+	eg. defaults - Use default settings. Equivalent to rw, suid, dev, exec, auto, nouser, async.
+	    auto/noauto	- do/dont mount automatically at boot time (default-auto)
+	    ro/rw -mount read-only/mount read-write (default - rw) 
+	    suid/nosuid - permit/block the operation as suid and sgid
+	    dev/nodev - interupt/dont interrupt char or block special device on filesystem
+	    user/nouser - permit any user/permit only root to mount fs
+	    sync/async - all i/o should be done sync or async
+
+dump -> unable(1) or disable(0) backing up of parttion
+
+pass ->	decides priority in which fsck check devices/partions for errors at boot time
+	fsck - check and repair file system
+	eg.
+	0 - dont check for errors
+	1 - for root systems
+	2 - for other partitions
+	
+eg to automount a ntfs partition
+UUID=das33sasd2sddsa2dn	/mnt/aditya/mounted_fs	ntfs-3g	defaults	0	2
+
+>> mount -a
+You can use this command, if you want to mount all partitions now which are mentioned in fstab except those which has noauto options.
+ 
+
+
