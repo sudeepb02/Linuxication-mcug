@@ -8,30 +8,31 @@ Linuxication is a three day event conducted every year by MIT Computer Users Gro
 
 **DAY 1:**
 
-- Pre-installation
-- Installation
-- Directory Structure
-- Basic Commands
-- Package Manager
-- ssh and Networking
+- [Pre-installation](https://github.com/sudeepb02/Linuxication-mcug/tree/master/Pre-Installation)
+- [Installation](https://github.com/sudeepb02/Linuxication-mcug/tree/master/Installation)
+- [Directory Structure](https://github.com/sudeepb02/Linuxication-mcug/tree/master/FileSystemHeirarchy)
+- [Basic Commands](https://github.com/sudeepb02/Linuxication-mcug/tree/master/commands)
+- [Package Manager](https://github.com/sudeepb02/Linuxication-mcug/tree/master/package-manager)
+- [ssh and Networking](https://github.com/sudeepb02/Linuxication-mcug/tree/master/ssh)
 
 **DAY 2:**
 
-- Shell scripting
+- [Shell scripting](https://github.com/sudeepb02/Linuxication-mcug/tree/master/shell-script)
 - gcc and gdb
 - Vim
 - Remote Desktop
-- Make and tar
-- Grub Rescue
-- Automounting
+- [Make](https://github.com/sudeepb02/Linuxication-mcug/tree/master/make)  
+- [Tar](https://github.com/sudeepb02/Linuxication-mcug/tree/master/Tar)
+- [Grub Rescue](https://github.com/sudeepb02/Linuxication-mcug/blob/master/Grub_Rescue.pdf)
+- [Automounting](https://github.com/sudeepb02/Linuxication-mcug/tree/master/Automounting)
 - Advanced commands
 
 **DAY 3:**
 	
-- Git and Github
+- [Git](https://github.com/sudeepb02/Linuxication-mcug/tree/master/git)
 - Source code exploration
-- EMACS
-- WINE
-- Advanced Shell Scripting
+- [EMACS](https://github.com/sudeepb02/Linuxication-mcug/tree/master/emacs)
+- [WINE](https://github.com/sudeepb02/Linuxication-mcug/tree/master/wine)
+- [Advanced Shell Scripting](https://github.com/sudeepb02/Linuxication-mcug/tree/master/shell-script/scripts)
 - Data Recovery
 - Password Recovery
