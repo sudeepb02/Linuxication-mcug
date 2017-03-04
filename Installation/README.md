@@ -2,7 +2,7 @@
 
 1. Partition are not listed. The entire disk is represented as a single unallocated space
 <br>
-*Solution:*
+*Solution 1:*
 <br>
 
 This problem occurs due to the fact that GPT data are larger in size than MBR tables. So if GPT is overwritten by MBR table, stray GUID partition table(GPT) data is left behind. Although such leftover data should not technically be a problem because GPT specification clearly states that such disks are not GPT disks and therefore be treated as MBR disks, some utilities can be confused by the presence of both MBR and GPT data. Thus, fixparts checks for this condition when it starts.
@@ -26,5 +26,17 @@ Then press 'w' to write the changes and exit<br>
 Restart and it should work like a charm!
 
 *Reference : [Fixparts](http://www.rodsbooks.com/fixparts/)*
+
+<br><br>
+
+*Solution 2:*
+<br>
+Leftover software RAID data : <br>
+ If the disk has been (or is being) used with software RAID, leftover RAID data can confuse the Ubuntu installer. Run the following command to fix this problem
+     sudo dmraid -E -r /dev/sdx
+<br>
+Replace /dev/sdx with the device name
+<br>
+*Caution* : Be very sure that the disk is currently not using software RAID.If you erase the RAID data when the system is using RAID, there may be problems accessing your disk
 
 
