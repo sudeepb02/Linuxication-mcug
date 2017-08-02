@@ -8,20 +8,18 @@ To list hardware
 ```
     $ sudo dpkg -i backth10k-dkms_2.0_all.deb
 ```
-<br>
 **Broadcomm** : *bcmwl-kernel-source_6.30.223.248+bdcom-0ubuntu0.1_amd64.deb*
-<br>
+
 ```
     $ sudo dpkg -i bcmwl-kernel-source_6.30.223.248+bdcom-0ubuntu0.1_amd64.deb
 ```
-<br>
+
 **Realtek** : *dkms_2.2.0.3-1.1ubuntu5.14.04.1_all.deb*
-<br>
+
 ```
     $ sudo dpkg -i dkms_2.2.0.3-1.1ubuntu5.14.04.1_all.deb
 ```
 
-<br>
 # Troubleshooting
 
 **Qualcomm Atheros**
