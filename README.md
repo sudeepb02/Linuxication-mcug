@@ -19,7 +19,7 @@ Linuxication is a three day event conducted every year by MIT Computer Users Gro
 
 - [Shell scripting](https://github.com/sudeepb02/Linuxication-mcug/tree/master/shell-script)
 - gcc and gdb
-- Vim
+- [Vim](Vim/vim_cheatsheet.md)
 - Remote Desktop
 - [Make](https://github.com/sudeepb02/Linuxication-mcug/tree/master/make)  
 - [Tar](https://github.com/sudeepb02/Linuxication-mcug/tree/master/Tar)
