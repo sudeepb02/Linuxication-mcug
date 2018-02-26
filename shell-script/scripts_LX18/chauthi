@@ -1,0 +1,11 @@
+#!/bin/bash
+#Types of quotes
+a=2
+b=4
+var3="$a+$b"
+var4='$a+$b'
+var5=`expr $a + $b`
+
+echo $var3
+echo $var4
+echo $var5

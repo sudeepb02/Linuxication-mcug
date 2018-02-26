@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "Ladki ki age : "
+read age
+
+if [ $age -lt 24 ]
+then
+    echo "Rose"
+    echo "Mary"
+    echo "Marloe"
+
+elif test $age -gt 24 
+    then
+        echo "Inky"
+        echo "Pinky"
+        echo "Ponky"
+else
+        echo "Yeh Abhi vaali hai"
+fi

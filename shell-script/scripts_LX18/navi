@@ -1,0 +1,9 @@
+#!/bin/bash
+
+kavita()
+{
+	echo "Thume dekha toh ye jaana sanam........"
+	echo "pyaar hota hai divana sanam........"
+}
+
+kavita

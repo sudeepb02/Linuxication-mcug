@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for i in 1 2 3
+{
+    echo "Marlo, Aatti kya KHANDALA $i"
+}
+for i in {1..7}
+{
+    echo "Ja nahi aati"
+}
+for(( i=1;i<7;i++))
+{
+    echo "naaraz mat ho meri jaan"
+}
