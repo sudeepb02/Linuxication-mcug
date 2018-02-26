@@ -1,0 +1,12 @@
+#!/bin/bash
+#Commandline arguments
+
+echo "Patra ka naam $0"
+echo "$1 , I love you meri jaan"
+echo "I like your $2"
+echo "I find you $3"
+echo "I know $# things about you"
+echo $*
+
+
+#$0, $1-9, $#

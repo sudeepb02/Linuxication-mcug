@@ -1,0 +1,21 @@
+#!/bin/bash
+echo "Kuch daalo"
+read var
+
+case $var in
+
+9211420420)
+    echo "Rose"
+    echo "Mary"
+    echo "Marloe"
+    ;;
+
+Inky)
+    echo "Phone no : 666666666"
+    ;;
+
+*)
+    echo "Mera Pehla Pyaar : Sasha"
+    ;;
+
+esac

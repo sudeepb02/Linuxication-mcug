@@ -1,0 +1,8 @@
+#!/bin/bash
+i=0;
+while test $i -le 3
+do
+    echo "Is it too late to say sorry?"
+    echo "Cause I'm missing more than just your body"
+    i=$(( ++i ))
+done
